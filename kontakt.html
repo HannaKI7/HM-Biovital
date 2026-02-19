@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – HM Biovital Hannover</title>
+  <meta name="description" content="Kontakt zu HM Biovital Hannover. Herrenhäuser Str. 76A, 30419 Hannover. Tel: 0511 / 763 716 05. Termin online anfragen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header scrolled">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-name">HM Biovital</div>
+        <div class="logo-tagline">Medizinische Ästhetik · Hannover</div>
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="behandlungen.html">Behandlungen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="kontakt.html" class="nav-cta">Termin buchen</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" role="dialog" aria-label="Navigation">
+    <button class="mobile-nav-close" aria-label="Menü schließen">✕</button>
+    <a href="index.html">Start</a>
+    <a href="behandlungen.html">Behandlungen</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="kontakt.html" class="btn btn-gold" style="margin-top: 16px;">Termin buchen</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Wir freuen uns auf Sie</span>
+      <h1>Kontakt</h1>
+      <p>Vereinbaren Sie einen Termin oder stellen Sie uns Ihre Fragen – wir melden uns schnellstmöglich bei Ihnen.</p>
+    </div>
+  </section>
+
+
+  <!-- KONTAKT SECTION -->
+  <section class="kontakt-section">
+    <div class="container">
+      <div class="kontakt-grid">
+
+        <!-- INFO -->
+        <div class="kontakt-info">
+
+          <div class="kontakt-block reveal">
+            <div class="kontakt-block-label">Adresse</div>
+            <address>
+              HM Biovital<br>
+              Herrenhäuser Str. 76A<br>
+              30419 Hannover<br>
+              (Stadtteil Herrenhausen)
+            </address>
+          </div>
+
+          <div class="kontakt-block reveal reveal-delay-1">
+            <div class="kontakt-block-label">Erreichbarkeit</div>
+            <p>
+              <a href="tel:+4951176371605">0511 / 763 716 05</a><br>
+              <a href="mailto:info@hm-biovital.de">info@hm-biovital.de</a>
+            </p>
+          </div>
+
+          <div class="kontakt-block reveal reveal-delay-2">
+            <div class="kontakt-block-label">Öffnungszeiten</div>
+            <table class="hours-table">
+              <tr>
+                <td>Montag</td>
+                <td>10:00 – 19:00 Uhr</td>
+              </tr>
+              <tr>
+                <td>Dienstag</td>
+                <td>10:00 – 19:00 Uhr</td>
+              </tr>
+              <tr>
+                <td>Mittwoch</td>
+                <td>13:00 – 19:00 Uhr</td>
+              </tr>
+              <tr>
+                <td>Donnerstag</td>
+                <td>10:00 – 19:00 Uhr</td>
+              </tr>
+              <tr>
+                <td>Freitag</td>
+                <td>10:00 – 19:00 Uhr</td>
+              </tr>
+              <tr>
+                <td>Samstag</td>
+                <td>10:00 – 16:00 Uhr</td>
+              </tr>
+              <tr>
+                <td>Sonntag</td>
+                <td style="color: var(--text-light);">Geschlossen</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="kontakt-block reveal reveal-delay-3">
+            <div class="kontakt-block-label">Anfahrt</div>
+            <p>
+              Gut erreichbar mit dem Auto (Parkplätze vor Ort) sowie mit
+              öffentlichen Verkehrsmitteln. Nächste Haltestelle:
+              <strong>Herrenhäuser Str.</strong> (Bus-/Straßenbahnlinien Richtung Herrenhausen).
+            </p>
+          </div>
+
+        </div>
+
+        <!-- FORM -->
+        <div class="reveal reveal-delay-1">
+          <form class="kontakt-form contact-form" novalidate>
+            <h3>Terminanfrage</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="vorname">Vorname</label>
+                <input type="text" id="vorname" name="vorname" placeholder="Ihr Vorname" required>
+              </div>
+              <div class="form-group">
+                <label for="nachname">Nachname</label>
+                <input type="text" id="nachname" name="nachname" placeholder="Ihr Nachname" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-Mail-Adresse</label>
+              <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
+            </div>
+
+            <div class="form-group">
+              <label for="telefon">Telefon <span style="font-weight: 400; text-transform: none; letter-spacing: 0; font-size: 0.8rem; color: var(--text-light);">(optional)</span></label>
+              <input type="tel" id="telefon" name="telefon" placeholder="0511 / ...">
+            </div>
+
+            <div class="form-group">
+              <label for="behandlung">Gewünschte Behandlung</label>
+              <select id="behandlung" name="behandlung">
+                <option value="" disabled selected>Bitte wählen …</option>
+                <option>Botox</option>
+                <option>Hyaluronsäure</option>
+                <option>Laser-Haarentfernung</option>
+                <option>PlasmaPen</option>
+                <option>Lipolyse</option>
+                <option>Microneedling RF</option>
+                <option>Picosekunden-Laser (Tattooentfernung)</option>
+                <option>Powder Brows</option>
+                <option>Unverbindliche Beratung</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="nachricht">Nachricht</label>
+              <textarea id="nachricht" name="nachricht" placeholder="Teilen Sie uns Ihr Anliegen mit – wir freuen uns auf Ihre Nachricht …"></textarea>
+            </div>
+
+            <p class="form-privacy">
+              Mit dem Absenden stimmen Sie unserer
+              <a href="impressum.html#datenschutz">Datenschutzerklärung</a> zu.
+              Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.
+            </p>
+
+            <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center;">
+              Anfrage absenden
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MAP -->
+  <div class="map-section">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.5!2d9.696!3d52.393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zSGVycmVuaMOkdXNlciBTdHIuIDc2QSwgMzA0MTkgSGFubm92ZXI!5e0!3m2!1sde!2sde!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Standort HM Biovital Hannover">
+    </iframe>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-brand-name">HM Biovital</div>
+          <div class="footer-brand-tag">Medizinische Ästhetik</div>
+          <p>Ihr Spezialist für moderne, schonende Ästhetik in Hannover – für Ergebnisse, die sich natürlich anfühlen.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Behandlungen</h4>
+          <ul class="footer-links">
+            <li><a href="behandlungen.html#botox">Botox</a></li>
+            <li><a href="behandlungen.html#hyaluron">Hyaluronsäure</a></li>
+            <li><a href="behandlungen.html#laser-haar">Laser-Haarentfernung</a></li>
+            <li><a href="behandlungen.html#plasmapen">PlasmaPen</a></li>
+            <li><a href="behandlungen.html">Alle Behandlungen</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Praxis</h4>
+          <ul class="footer-links">
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="impressum.html#datenschutz">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <address class="footer-address">
+            Herrenhäuser Str. 76A<br>30419 Hannover<br><br>
+            <a href="tel:+4951176371605">0511 / 763 716 05</a><br>
+            <a href="mailto:info@hm-biovital.de">info@hm-biovital.de</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 HM Biovital · Olaf Marzian &amp; Hanna Marzian GbR</span>
+        <div class="footer-bottom-links">
+          <a href="impressum.html">Impressum</a>
+          <a href="impressum.html#datenschutz">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
