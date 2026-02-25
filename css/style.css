@@ -331,8 +331,7 @@ section { padding: 100px 0; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(145deg, #120D0E 0%, #1D1418 40%, #271B1A 65%, #130E0F 100%);
+  background: #120D0E;
 }
 
 .hero::before {
@@ -445,10 +444,7 @@ section { padding: 100px 0; }
 
 .hero-image {
   position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 52%;
+  inset: 0;
   z-index: 1;
   overflow: hidden;
 }
@@ -457,7 +453,7 @@ section { padding: 100px 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 60% top;
+  object-position: 65% top;
   display: block;
 }
 
@@ -466,15 +462,11 @@ section { padding: 100px 0; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, #120D0E 0%, rgba(18, 13, 14, 0.55) 22%, rgba(18, 13, 14, 0.15) 50%, transparent 72%),
-    linear-gradient(to top, rgba(18, 13, 14, 0.75) 0%, transparent 28%),
-    linear-gradient(to bottom, rgba(18, 13, 14, 0.4) 0%, transparent 14%);
+    linear-gradient(to right, rgba(18, 13, 14, 0.88) 0%, rgba(18, 13, 14, 0.6) 40%, rgba(18, 13, 14, 0.25) 70%, rgba(18, 13, 14, 0.4) 100%),
+    linear-gradient(to top, rgba(18, 13, 14, 0.85) 0%, transparent 30%),
+    linear-gradient(to bottom, rgba(18, 13, 14, 0.5) 0%, transparent 18%);
   z-index: 2;
   pointer-events: none;
-}
-
-@media (max-width: 960px) {
-  .hero-image { display: none; }
 }
 
 /* 8. Page Hero (Unterseiten)
