@@ -445,9 +445,9 @@ section { padding: 100px 0; }
 .hero-image {
   position: absolute;
   right: 0;
-  top: 115px;
+  top: 90px;
   width: 68%;
-  height: calc(100% - 115px);
+  height: calc(100% - 90px);
   z-index: 1;
 }
 
