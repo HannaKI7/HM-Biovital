@@ -480,7 +480,7 @@ section { padding: 100px 0; }
 
   .hero-image img {
     object-fit: cover;
-    object-position: center 15%;
+    object-position: center top;
   }
 
   .hero-image::after {
