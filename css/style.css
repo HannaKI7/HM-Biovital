@@ -1186,7 +1186,130 @@ section { padding: 100px 0; }
 }
 .impressum-content a:hover { color: var(--gold-dark); }
 
-/* 18. Preisliste
+/* 18. Leistungsübersicht (kompakte Übersicht oben)
+   ============================================================ */
+.uebersicht-section { background: var(--white); padding: 100px 0; }
+
+.uebersicht-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--border);
+  margin-top: 56px;
+}
+
+.uebersicht-card {
+  background: var(--white);
+  padding: 32px 28px 28px;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: background var(--t);
+}
+.uebersicht-card:hover { background: var(--dark); }
+
+.uebersicht-num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--border);
+  line-height: 1;
+  margin-bottom: 4px;
+  transition: color var(--t-fast);
+}
+.uebersicht-card:hover .uebersicht-num { color: rgba(255,255,255,0.2); }
+
+.uebersicht-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: color var(--t-fast);
+}
+.uebersicht-card:hover .uebersicht-name { color: var(--white); }
+
+.uebersicht-tag {
+  font-size: 0.63rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  transition: color var(--t-fast);
+}
+.uebersicht-card:hover .uebersicht-tag { color: rgba(255,255,255,0.4); }
+
+.uebersicht-preis {
+  font-size: 0.875rem;
+  color: var(--gold);
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* Inline-Preise in Behandlungs-Sektionen
+   ============================================================ */
+.behandlung-preis {
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: var(--rose);
+  border-left: 2px solid var(--gold);
+}
+.behandlung-preis--table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.behandlung-preis-label {
+  font-size: 0.63rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.behandlung-preis-value {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.behandlung-preis-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.875rem;
+  color: var(--text-light);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  gap: 16px;
+}
+.behandlung-preis-row:last-of-type { border-bottom: none; }
+.behandlung-preis-row span:last-child {
+  color: var(--text);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.behandlung-preis-row--highlight span { color: var(--gold) !important; font-weight: 600 !important; }
+
+.behandlung-preis-hinweis {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .uebersicht-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .uebersicht-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .uebersicht-grid { grid-template-columns: 1fr; }
+}
+
+/* 18b. Preisliste (Legacy-CSS – nicht mehr im Einsatz)
    ============================================================ */
 .preisliste-section {
   background: var(--dark-2);
