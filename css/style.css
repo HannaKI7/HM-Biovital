@@ -900,24 +900,46 @@ section { padding: 100px 0; }
 .info-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  background: var(--border);
+  gap: 3px;
+  background: var(--dark);
   margin-top: 36px;
 }
 .info-box {
-  background: var(--white);
+  background: var(--dark-3);
   padding: 22px 26px;
+  cursor: default;
+  transition: background var(--t-fast);
+  position: relative;
+  overflow: hidden;
+}
+.info-box::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width var(--t);
+}
+.info-box:hover {
+  background: #312828;
+}
+.info-box:hover::before {
+  width: 100%;
 }
 .info-box-label {
-  font-size: 0.63rem;
-  letter-spacing: 0.18em;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-light);
-  margin-bottom: 6px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 8px;
+  font-weight: 500;
 }
 .info-box-value {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  color: var(--gold);
 }
 
 /* 15. Über uns Page
