@@ -102,16 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
 
       const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData.entries());
 
       try {
         const res = await fetch(contactForm.action, {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-          },
-          body: JSON.stringify(data),
+          body: formData,
         });
 
         if (res.ok) {
