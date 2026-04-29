@@ -84,31 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ----------------------------------------------------------
-     Contact Form Feedback
+     Contact Form – handled by nForms shield.js
+     (shield.js intercepts submit, runs PoW, sends to API)
      ---------------------------------------------------------- */
-  const contactForm = document.querySelector('.contact-form');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', e => {
-      e.preventDefault();
-
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const original  = submitBtn.textContent;
-
-      submitBtn.textContent = 'Nachricht gesendet ✓';
-      submitBtn.disabled    = true;
-      submitBtn.style.background = '#4a7c59';
-      submitBtn.style.color      = '#fff';
-
-      setTimeout(() => {
-        submitBtn.textContent      = original;
-        submitBtn.disabled         = false;
-        submitBtn.style.background = '';
-        submitBtn.style.color      = '';
-        contactForm.reset();
-      }, 4000);
-    });
-  }
 
 
   /* ----------------------------------------------------------
