@@ -140,6 +140,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, true);
   }
+
+
+  /* ----------------------------------------------------------
+     Smooth scroll for anchor links
+     ---------------------------------------------------------- */
   const contactForm = document.querySelector('.contact-form');
 
   if (contactForm) {
