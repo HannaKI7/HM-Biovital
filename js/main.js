@@ -84,9 +84,114 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ----------------------------------------------------------
-     Contact Form – handled by nForms shield.js
-     (shield.js intercepts submit, runs PoW, sends to API)
+     Contact Form – AJAX submit with nForms
+     shield.js injects honeypot/timing fields,
+     we intercept and send via fetch for no-redirect UX
      ---------------------------------------------------------- */
+  const contactForm = document.querySelector('.contact-form');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+
+      submitBtn.textContent = 'Wird gesendet …';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+          contactForm.innerHTML = `
+            <div style="text-align: center; padding: 48px 24px;">
+              <h3 style="color: var(--gold); margin-bottom: 12px;">Vielen Dank!</h3>
+              <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.7;">
+                Ihre Anfrage ist bei uns eingegangen.<br>
+                Wir melden uns schnellstmöglich bei Ihnen.
+              </p>
+            </div>`;
+        } else {
+          throw new Error();
+        }
+      } catch {
+        submitBtn.textContent = 'Fehler – bitte erneut versuchen';
+        submitBtn.style.background = '#c0392b';
+        submitBtn.style.color = '#fff';
+        submitBtn.disabled = false;
+
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.style.background = '';
+          submitBtn.style.color = '';
+        }, 4000);
+      }
+    }, true);
+  }
+  const contactForm = document.querySelector('.contact-form');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+
+      submitBtn.textContent = 'Wird gesendet …';
+      submitBtn.disabled = true;
+
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+          contactForm.innerHTML = `
+            <div style="text-align: center; padding: 48px 24px;">
+              <h3 style="color: var(--gold); margin-bottom: 12px;">Vielen Dank!</h3>
+              <p style="color: var(--text-light); font-size: 1.05rem; line-height: 1.7;">
+                Ihre Anfrage ist bei uns eingegangen.<br>
+                Wir melden uns schnellstmöglich bei Ihnen.
+              </p>
+            </div>`;
+        } else {
+          throw new Error();
+        }
+      } catch {
+        submitBtn.textContent = 'Fehler – bitte erneut versuchen';
+        submitBtn.style.background = '#c0392b';
+        submitBtn.style.color = '#fff';
+        submitBtn.disabled = false;
+
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.style.background = '';
+          submitBtn.style.color = '';
+        }, 4000);
+      }
+    }, true);
+  }
 
 
   /* ----------------------------------------------------------
